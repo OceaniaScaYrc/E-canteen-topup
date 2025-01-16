@@ -29,11 +29,11 @@ a{
 }
 
 .topbg{
-     height: 30vh;
+     height: 35vh;
 }
 
 .bottombg{
-     height: 70vh;     
+     height: 65vh;     
      background: #e76ed7;
      overflow-y: scroll;
 }
@@ -64,7 +64,7 @@ a{
 .topup{
      position: absolute;
      right: 10px;
-     bottom: 25px;
+     bottom: 10px;
 }
 
 .balance{
