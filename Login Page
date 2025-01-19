@@ -1,78 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>YRC top-up</title>
-     <link rel="shortcut icon" href="./image.png" type="image/x-icon">
-     <link rel="stylesheet" href="./dist/bootstrap/css/bootstrap.min.css">
-     <link rel="stylesheet" href="./dist/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background: #ffffff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555555;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #dddddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus {
+            border-color: #4a90e2;
+            outline: none;
+            box-shadow: 0 0 4px rgba(74, 144, 226, 0.5);
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #4a90e2;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #357ab8;
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .signup-link a {
+            color: #4a90e2;
+            text-decoration: none;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-
 <body>
-
-     <nav class="navbar navbar-expand-lg position-absolute end-0 start-0 top-0 shadow-sm">
-          <div class="container-fluid">
-               <a class="navbar-brand text-white" href="./index.html">ระบบเติมเงินบัตรโรงอาหารออนไลน์</a>
-               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-               </button>
-               <div class="collapse navbar-collapse" id="navbarScroll">
-                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav" style="--bs-scroll-height: 100px;">
-                         <li class="nav-item">
-                              <a class="text-white nav-link active" aria-current="page" href="./index.html">หน้าหลัก</a>
-                         </li>
-                         <li class="nav-item">
-                              <a class="nav-link text-white" href="./topup.html">เติมเงิน</a>
-                         </li>
-                         <!-- <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                   aria-expanded="false">
-                                   รายละเอียด
-                              </a>
-                              <ul class="dropdown-menu">
-                                   <li><a class="dropdown-item" href="#">รายละเอียด1</a></li>
-                                   <li><a class="dropdown-item" href="#">รายละเอียด2</a></li>
-                                   <li>
-                                        <hr class="dropdown-divider">
-                                   </li>
-                                   <li><a class="dropdown-item" href="#">รายละเอียด3</a></li>
-                              </ul>
-                         </li> -->
-                         <li class="nav-item">
-                              <a class="nav-link disabled text-gray" aria-disabled="true">ประวัติการเติมเงิน</a>
-                         </li>
-                    </ul>
-                    <!-- <form class="d-flex" role="search">
-                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                         <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form> -->
-               </div>
-          </div>
-     </nav>
-
-     <div class="box d-flex justify-content-center align-items-center" style="padding-top:70px; height: 100vh;">
-
-          <form class="d-flex row align-items-center justify-content-center p-3 mx-sm-auto mx-3 col-sm-8 col-md-5 card2" method="post" action="./nopage.html">
-               <a href="./index.html"><กลับสู่หน้าหลัก</a>
-               <h1 class="text-center">เติมเงิน</h1>
-               <p class="mb-0">รหัสนักเรียน : 52xx0</p>
-               <p class="mb-0">ยอดเงินคงเหลือ : 231,446.50 บาท</p>
-               <div class="mb-3 mt-4">
-                    <label for="amount">จำนวนที่ต้องการเติมเงิน</label><br>
-                    <input type="number" min="1" class="form-control" id="amount" name="amount" required>
-               </div>
-
-               <div class="mb-3">
-                    <button type="submit" class="btn btn-pink">ยืนยันการเติมเงิน</button>
-               </div>
-          </form>
-
-     </div>
-
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="/login" method="POST">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="btn">Login</button>
+        </form>
+        <div class="signup-link">
+            <p>Don't have an account? <a href="/signup">Sign up</a></p>
+        </div>
+    </div>
 </body>
-<script src="./dist/bootstrap/js/bootstrap.bundle.min.js"></script>
-
 </html>
