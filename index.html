@@ -105,7 +105,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        min-height: 100vh;
     }
         
     </style>
@@ -116,7 +116,8 @@
     
 <nav class="navbar navbar-expand-lg position-absolute end-0 start-0 top-0 shadow-sm">
           <div class="container-fluid">
-               <a class="navbar-brand text-white" href="./main.html">ระบบเติมเงินบัตรโรงอาหารออนไลน์</a>
+               <a class="navbar-brand text-white" href="./main.html">เติมเงินบัตรโรงอาหาร</a>
+               <!-- <a class="navbar-brand text-white" href="./main.html">ระบบเติมเงินบัตรโรงอาหารออนไลน์</a> -->
                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                     aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -156,7 +157,7 @@
      </nav>
 
      <div class="logo-container">
-        <img src="logo.png" alt="logo" width="150">
+        <img src="logo.png" draggable="false" alt="logo" width="150">
     </div>
     
     <div class="login-container">      
@@ -164,7 +165,7 @@
 
         
 
-        <form id="loginForm" class="position-relative"></form>
+        <form  class="asdasdasdwd" action="./main.html">
             <div class="form-group">
                 <label for="username">รหัสนักเรียน</label>
                 <input type="text" id="username" name="username" placeholder="โปรดป้อนรหัสนักเรียน" required>
@@ -173,8 +174,8 @@
                 <label for="password">รหัสผ่าน</label>
                 <input type="password" id="password" name="password" placeholder="โปรดป้อนรหัสผ่าน" required>
             </div>
-            <button type="submit" class="btn">เข้าสู่ระบบ</button>
-            <p class="bottomtext">*ระบบนี้อยู่ระหว่างการพัฒนา*</p>
+            <button id="loginForm" type="submit" class="btn">เข้าสู่ระบบ</button>
+            <p class="bottomtext mb-1">*ระบบนี้อยู่ระหว่างการพัฒนา*</p>
         </form>
         <!--<div class="signup-link">
             <p>Don't have an account? <a href="#">Sign up</a></p>
@@ -185,10 +186,10 @@
            <label for="Warning" style="font-size: 16px; color: red;">*ระบบนี้อยู่ระหว่างการพัฒนา*</label>
        </div>     -->
     
-    <script>
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
+    <!-- <script>
+        document.getElementById('loginForm').addEventListener('click', function(e) {
             e.preventDefault(); // ป้องกันการส่งฟอร์มจริง
-
+            console.log("nifgger")
             // เก็บค่าจากฟอร์ม
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
@@ -207,7 +208,7 @@
                 alert("Invalid username or password. Please try again.");
             }*/
         });
-    </script>
+    </script> -->
 </body>
 <script src="./dist/bootstrap/js/bootstrap.bundle.min.js"></script>
     

@@ -7,9 +7,11 @@
 html,body{
      margin: 0;
      padding: 0;
+     /* padding-top: 56px; */
      font-family: 'Line', sans-serif;
      background-color: #f4f4f4;
      overflow-x: hidden;
+     min-height: 100vh;
 }
 
 nav{
@@ -17,6 +19,10 @@ nav{
      color: #fff;
      padding: 10px 20px;
      z-index: 1000;
+     position: fixed;
+     left: 0;
+     right: 0;
+     top: 0;
 }
 
 a{
@@ -104,8 +110,14 @@ a{
 
 .bottomtext{
      position:absolute;
-     bottom: -60px;
+     bottom: -80px;
      left: 50%;
      transform: translate(-50%, -50%);
-     color:red;
+     color:red; 
+     width: 100%;
+     text-align: center;
+}
+
+.asdasdasdwd{
+     position: relative;
 }
