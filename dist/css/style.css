@@ -101,3 +101,11 @@ a{
      color: #fff;
      box-shadow: 0px 5px 25px #e76ed7;
 }
+
+.bottomtext{
+     position:absolute;
+     bottom: -60px;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     color:red;
+}

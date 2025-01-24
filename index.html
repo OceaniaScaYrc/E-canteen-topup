@@ -8,15 +8,6 @@
      <link rel="stylesheet" href="./dist/bootstrap/css/bootstrap.min.css">
      <link rel="stylesheet" href="./dist/css/style.css">
     <style>
-        body {
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
 
         .login-container {
             background: #ffffff;
@@ -27,7 +18,7 @@
             max-width: 400px;
         }
 
-        .login-container h2 {
+        .login-container h1 {
             text-align: center;
             margin-bottom: 20px;
             color: #333333;
@@ -85,18 +76,16 @@
         .signup-link a:hover {
             text-decoration: underline;
         }
-        ///
+        /* /// */
     /* จัดตำแหน่งรูปภาพให้อยู่ตรงกลาง */
     .logo-container {
         text-align: center;
-        margin-bottom: -40px; /* ดึงรูปภาพเข้ามาใกล้กับกล่องล็อกอิน */
+        /* margin-bottom: 40px;  */
     }
 
     .logo-container img {
-        width: 200px; /* ปรับขนาดรูปภาพ */
+        width: 180px; /* ปรับขนาดรูปภาพ */
     }
-
-     
 
     .login-container {
         background: #ffffff;
@@ -109,7 +98,6 @@
     }
 
     body {
-        font-family: Arial, sans-serif;
         background-color: #f4f4f9;
         margin: 0;
         padding: 0;
@@ -167,16 +155,16 @@
           </div>
      </nav>
 
-    <div class="logo-container">
+     <div class="logo-container">
         <img src="logo.png" alt="logo" width="150">
     </div>
     
-    
-    <div class="login-container">
+    <div class="login-container">      
+        <h1>เข้าสู่ระบบ</h1>
+
         
-        
-        <h2>เข้าสู่ระบบ</h2>
-        <form id="loginForm">
+
+        <form id="loginForm" class="position-relative"></form>
             <div class="form-group">
                 <label for="username">รหัสนักเรียน</label>
                 <input type="text" id="username" name="username" placeholder="โปรดป้อนรหัสนักเรียน" required>
@@ -186,15 +174,16 @@
                 <input type="password" id="password" name="password" placeholder="โปรดป้อนรหัสผ่าน" required>
             </div>
             <button type="submit" class="btn">เข้าสู่ระบบ</button>
+            <p class="bottomtext">*ระบบนี้อยู่ระหว่างการพัฒนา*</p>
         </form>
         <!--<div class="signup-link">
             <p>Don't have an account? <a href="#">Sign up</a></p>
         </div>-->
     </div>
     
-       <div class="form-group" style="height: 60px; display: flex; align-items: center; justify-content: center;">
+       <!-- <div class="form-group" style="height: 60px; display: flex; align-items: center; justify-content: center;">
            <label for="Warning" style="font-size: 16px; color: red;">*ระบบนี้อยู่ระหว่างการพัฒนา*</label>
-       </div>    
+       </div>     -->
     
     <script>
         document.getElementById('loginForm').addEventListener('submit', function(e) {
